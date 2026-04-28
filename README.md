@@ -26,7 +26,7 @@ A beautifully crafted, premium **Al-Quran mobile application** built with Flutte
 ## 🎥 Video Demo
 
 <div align="center">
-  <video src="https://raw.githubusercontent.com/ersandi15/Transcosmos-Quran/main/assets/video/video_app_transcosmos_quran.mp4" width="280" controls="controls" muted="muted" playsinline="playsinline"></video>
+  https://github.com/ersandi15/Transcosmos-Quran/raw/main/assets/video/video_app_transcosmos_quran.mp4
 </div>
 
 *Jika video tidak bisa diputar langsung, Anda bisa mendownload/melihatnya di folder [`assets/video/`](assets/video/)*
