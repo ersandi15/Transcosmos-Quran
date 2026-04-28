@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       title: 'Transcosmos Test Quran',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true, primarySwatch: Colors.blue),
-      // Langsung arahkan ke DashboardView
-      initialRoute: AppRoutes.surah,
+      // Langsung arahkan ke Splash Screen terlebih dahulu
+      initialRoute: AppRoutes.splash,
       getPages: AppPages.getPages(),
     );
   }

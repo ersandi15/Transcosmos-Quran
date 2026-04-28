@@ -2,7 +2,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <application
-        android:label="transcosmos_test"
+        android:label="Transcosmos Quran"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

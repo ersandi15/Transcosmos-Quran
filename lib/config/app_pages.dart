@@ -3,9 +3,11 @@ import 'package:transcosmos_test/config/app_routes.dart';
 import 'package:transcosmos_test/features/player/view/ui/player_view.dart';
 
 // Import Views
+import 'package:transcosmos_test/features/splash_screen/view/ui/splash_screen_view.dart';
 import 'package:transcosmos_test/features/surah/view/ui/surah_view.dart';
 
 // Import Controllers
+import 'package:transcosmos_test/features/splash_screen/controller/splash_screen_controller.dart';
 import 'package:transcosmos_test/features/surah/controller/surah_controller.dart';
 import 'package:transcosmos_test/features/player/controller/player_controller.dart';
 
@@ -20,6 +22,13 @@ class AppPages {
 
   static List<GetPage> getPages() {
     return [
+      GetPage(
+        name: AppRoutes.splash,
+        page: () => const SplashScreenView(),
+        binding: BindingsBuilder(() {
+          Get.put(SplashScreenController());
+        }),
+      ),
       GetPage(
         name: AppRoutes.surah,
         page: () => const SurahView(),
