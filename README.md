@@ -276,6 +276,7 @@ flutter build ios --release
 | **Flutter SDK** | `^3.10.8` |
 | **Dart SDK** | `^3.10.8` |
 | **Target Platforms** | Android, iOS, Web, Linux, macOS, Windows |
+| **Developer** | Ersandi Mukhibillah ([@ersandi15](https://github.com/ersandi15)) |
 
 ---
 
