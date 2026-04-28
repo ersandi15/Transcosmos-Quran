@@ -28,10 +28,17 @@ A beautifully crafted, premium **Al-Quran mobile application** built with Flutte
 *(Simpan hasil screenshot Anda di folder `assets/screenshots/` dengan nama file di bawah ini agar gambar otomatis muncul di GitHub)*
 
 <div align="center">
-  <img src="assets/screenshots/splash.png" width="24%" alt="Splash Screen">
-  <img src="assets/screenshots/home.png" width="24%" alt="Home / Surah List">
-  <img src="assets/screenshots/search.png" width="24%" alt="Search Feature">
-  <img src="assets/screenshots/player.png" width="24%" alt="Audio Player">
+  <img src="assets/screenshots/splash_screen.jpeg" width="24%" alt="Splash Screen">
+  <img src="assets/screenshots/shimmer_list_surah.jpeg" width="24%" alt="Shimmer Loading">
+  <img src="assets/screenshots/list_surah.jpeg" width="24%" alt="Home / Surah List">
+  <img src="assets/screenshots/search_surah.jpeg" width="24%" alt="Search Feature">
+  
+  <br><br>
+  
+  <img src="assets/screenshots/detail_surah_1.jpeg" width="24%" alt="Audio Player 1">
+  <img src="assets/screenshots/detail_surah_2.jpeg" width="24%" alt="Audio Player 2">
+  <img src="assets/screenshots/error_koneksi.jpeg" width="24%" alt="Error Handling Dialog">
+  <img src="assets/screenshots/custom_icon_app.jpeg" width="24%" alt="Custom App Icon">
 </div>
 
 *Jika Anda ingin melihat gambar mentahnya, silakan buka folder [`assets/screenshots/`](assets/screenshots/)*
