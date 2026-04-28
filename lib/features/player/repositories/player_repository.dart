@@ -22,8 +22,8 @@ class PlayerRepository implements IPlayerRepository {
         throw Exception(surahDetailResponse.status ?? 'Gagal memuat data surah');
       }
     } on DioException catch (e) {
-      // Tangkap error dari Dio secara spesifik jika diperlukan
-      throw Exception('Gagal terhubung ke server: ${e.message}');
+      // Menggunakan pesan error yang rapi dari DioService
+      throw Exception(DioService.getErrorMessage(e));
     } catch (e) {
       // Tangkap error lainnya (seperti parsing error, dll)
       throw Exception('Terjadi kesalahan tidak terduga: $e');

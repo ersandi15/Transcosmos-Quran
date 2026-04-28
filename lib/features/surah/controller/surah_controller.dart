@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:transcosmos_test/features/surah/models/surah_response_model.dart';
 import 'package:transcosmos_test/features/surah/repositories/i_surah_repository.dart';
+import 'package:transcosmos_test/utils/dialog_helper.dart';
 
 class SurahController extends GetxController {
   final ISurahRepository repository;
@@ -68,7 +69,11 @@ class SurahController extends GetxController {
         hasMore = false;
       }
     } catch (e) {
-      Get.snackbar("Error", e.toString());
+      String errorMessage = e.toString();
+      if (errorMessage.startsWith('Exception: ')) {
+        errorMessage = errorMessage.substring(11); // Remove "Exception: " prefix
+      }
+      DialogHelper.showError(description: errorMessage);
     } finally {
       isLoading(false);
     }

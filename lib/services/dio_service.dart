@@ -43,33 +43,25 @@ class DioService {
   // --- Helper Methods untuk HTTP Requests ---
 
   Future<Response> get(String endpoint, {Map<String, dynamic>? queryParameters}) async {
-    try {
-      return await _dio.get(endpoint, queryParameters: queryParameters);
-    } on DioException catch (e) {
-      _handleError(e);
-      rethrow;
-    }
+    return await _dio.get(endpoint, queryParameters: queryParameters);
   }
 
   Future<Response> post(String endpoint, {dynamic data, Map<String, dynamic>? queryParameters}) async {
-    try {
-      return await _dio.post(endpoint, data: data, queryParameters: queryParameters);
-    } on DioException catch (e) {
-      _handleError(e);
-      rethrow;
-    }
+    return await _dio.post(endpoint, data: data, queryParameters: queryParameters);
   }
   
-  // Fungsi terpusat untuk print/handle error dari Dio
-  void _handleError(DioException error) {
+  // Fungsi statis untuk mendapatkan pesan error yang rapi dari DioException
+  static String getErrorMessage(DioException error) {
     if (error.type == DioExceptionType.connectionTimeout) {
-      print('[Dio Error] Connection Timeout Exception');
+      return 'Koneksi terputus. Silakan periksa jaringan Anda.';
     } else if (error.type == DioExceptionType.receiveTimeout) {
-      print('[Dio Error] Receive Timeout Exception');
+      return 'Waktu permintaan habis. Silakan coba lagi.';
     } else if (error.type == DioExceptionType.badResponse) {
-      print('[Dio Error] Bad Response: ${error.response?.statusCode}');
+      return 'Terdapat masalah pada server (${error.response?.statusCode}).';
+    } else if (error.type == DioExceptionType.connectionError) {
+      return 'Tidak ada koneksi internet. Silakan periksa jaringan Anda.';
     } else {
-      print('[Dio Error] Something went wrong: ${error.message}');
+      return 'Terjadi kesalahan jaringan yang tidak diketahui.';
     }
   }
 }

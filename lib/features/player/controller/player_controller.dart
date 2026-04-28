@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:transcosmos_test/features/player/repositories/i_player_repository.dart';
 import 'package:transcosmos_test/features/player/models/surah_detail_response_model.dart';
+import 'package:transcosmos_test/utils/dialog_helper.dart';
 
 class PlayerController extends GetxController {
   final IPlayerRepository repository;
@@ -40,7 +41,11 @@ class PlayerController extends GetxController {
       await audioPlayer.setAudioSources(playlistSources);
       audioPlayer.play();
     } catch (e) {
-      Get.snackbar("Playback Error", e.toString());
+      String errorMessage = e.toString();
+      if (errorMessage.startsWith('Exception: ')) {
+        errorMessage = errorMessage.substring(11); // Remove "Exception: " prefix
+      }
+      DialogHelper.showError(title: "Playback Error", description: errorMessage);
     } finally {
       isLoading(false);
     }

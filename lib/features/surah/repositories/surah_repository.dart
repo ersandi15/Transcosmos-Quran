@@ -20,7 +20,7 @@ class SurahRepository implements ISurahRepository {
         throw Exception(surahResponse.status ?? 'Gagal memuat daftar surah');
       }
     } on DioException catch (e) {
-      throw Exception('Gagal terhubung ke server: ${e.message}');
+      throw Exception(DioService.getErrorMessage(e));
     } catch (e) {
       throw Exception('Terjadi kesalahan tidak terduga: $e');
     }
