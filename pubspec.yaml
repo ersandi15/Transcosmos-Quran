@@ -35,6 +35,28 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
+  # State Management & Routing
+  get: ^4.7.3
+
+  # Networking (Untuk fetch API alquran.cloud)
+  dio: ^5.9.2
+
+  # Audio Playback (Paling stabil untuk streaming dan seeking)
+  just_audio: ^0.10.5
+  audio_session: ^0.2.3
+
+  # UI Helper untuk Progress Bar & Slider (Sangat memudahkan fitur Seeking)
+  audio_video_progress_bar: ^2.0.3
+
+  # Shimmer effect for loading
+  shimmer: ^3.0.0
+
+  # Font (Membuat tampilan tulisan arab lebih rapi)
+  google_fonts: ^8.0.2
+
+  # SVG Icons
+  flutter_svg: ^2.2.4
+    
 dev_dependencies:
   flutter_test:
     sdk: flutter
