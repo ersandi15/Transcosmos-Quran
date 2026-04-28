@@ -39,6 +39,11 @@ lib/
 │   └── dio_service.dart        # Centralized HTTP client (Dio singleton)
 │
 ├── features/
+│   ├── splash_screen/          # Feature: Animated Splash
+│   │   ├── controller/         # SplashScreenController
+│   │   └── view/
+│   │       └── ui/             # SplashScreenView
+│   │
 │   ├── surah/                  # Feature: Surah List
 │   │   ├── controller/         # SurahController (GetxController)
 │   │   ├── models/             # SurahResponseModel (JSON deserialization)
