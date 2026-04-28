@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:transcosmos_test/config/app_colours.dart';
+import 'package:transcosmos_test/config/app_routes.dart';
 import '../../controller/surah_controller.dart';
 import '../components/surah_header.dart';
 import '../components/surah_card.dart';
@@ -25,9 +26,7 @@ class SurahView extends GetView<SurahController> {
             ),
             slivers: [
               // --- HEADER COMPONENT ---
-              SurahHeader(
-                onSearch: (value) => controller.searchSurah(value),
-              ),
+              SurahHeader(onSearch: (value) => controller.searchSurah(value)),
 
               const SliverPadding(padding: EdgeInsets.only(top: 12)),
 
@@ -65,7 +64,10 @@ class SurahView extends GetView<SurahController> {
                       return SurahCard(
                         surah: surah,
                         onTap: () {
-                          Get.toNamed('/player', arguments: surah.number);
+                          Get.toNamed(
+                            AppRoutes.player,
+                            arguments: surah.number,
+                          );
                         },
                       );
                     },
