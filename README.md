@@ -13,8 +13,12 @@ A beautifully crafted, premium **Al-Quran mobile application** built with Flutte
 | 📄 **Infinite Scroll Pagination** | Client-side pagination loads 15 Surahs at a time for smooth scrolling performance |
 | 🎵 **Audio Murottal Player** | Stream per-ayah audio from `alquran.cloud` assembled into a seamless playlist |
 | ⏯️ **Full Playback Controls** | Play, Pause, Skip Next, Skip Previous, and interactive seek bar |
+| ✨ **Lyric / Ayah Sync** | The displayed Arabic text dynamically updates and highlights exactly which Ayah is currently being recited |
 | 📜 **Arabic Text Rendering** | Per-ayah Arabic text displayed with the Amiri font for authentic readability |
 | 💫 **Shimmer Loading** | Skeleton shimmer animation during initial data fetch for a polished UX |
+| 🚀 **Seamless Splash Screen** | Custom native Android/iOS splash screen that transitions seamlessly into an animated Flutter splash screen |
+| 🛡️ **Custom Error Handling** | Global interceptors with user-friendly pop-up dialogs for connection timeouts and network errors |
+| 🎨 **Adaptive App Icon** | Custom high-res Android adaptive icon and iOS launcher icon |
 | 🔄 **Pull-to-Refresh** | Swipe down on the Surah list to reload data from the API |
 
 ---
@@ -168,6 +172,12 @@ fvm flutter run
 App Start
     │
     ▼
+SplashScreenView (/splash)
+    │  ─ Covers native engine startup via flutter_native_splash
+    │  ─ Plays subtle fade-in scale animation
+    │  ─ Navigates to Dashboard after 2.5 seconds
+    │
+    ▼
 SurahView (/surah)
     │  ─ Fetches all 114 Surahs from API on init
     │  ─ Displays with shimmer skeleton during loading
@@ -197,6 +207,11 @@ SurahView (/surah)
 ```bash
 flutter test
 ```
+
+### Unit Testing Architecture
+
+To fulfill the bonus criteria, this project implements a **Unit Test** for the core logic layer (`SurahController`). 
+We use **`mocktail`** to mock the `ISurahRepository`. This ensures that we test the search filtering, pagination limits, and loading states in isolation without making real HTTP requests.
 
 Test files are located in the `test/` directory.
 
