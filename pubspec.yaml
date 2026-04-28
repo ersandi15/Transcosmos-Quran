@@ -60,8 +60,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^6.0.0
+
+  # For Testing
+  mocktail: ^1.0.3
 
   # For Splash
   flutter_native_splash: ^2.4.4
