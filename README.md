@@ -23,6 +23,21 @@ A beautifully crafted, premium **Al-Quran mobile application** built with Flutte
 
 ---
 
+## 📸 Screenshots
+
+*(Simpan hasil screenshot Anda di folder `assets/screenshots/` dengan nama file di bawah ini agar gambar otomatis muncul di GitHub)*
+
+<div align="center">
+  <img src="assets/screenshots/splash.png" width="24%" alt="Splash Screen">
+  <img src="assets/screenshots/home.png" width="24%" alt="Home / Surah List">
+  <img src="assets/screenshots/search.png" width="24%" alt="Search Feature">
+  <img src="assets/screenshots/player.png" width="24%" alt="Audio Player">
+</div>
+
+*Jika Anda ingin melihat gambar mentahnya, silakan buka folder [`assets/screenshots/`](assets/screenshots/)*
+
+---
+
 ## 🏗️ Architecture
 
 The project follows a clean **Feature-first** architecture combined with **GetX** for state management and routing, and a **Repository Pattern** for data access.
